@@ -1,7 +1,7 @@
 import express, { Request, Response, NextFunction } from "express";
 import jokesRoutes from "./routes/jokes";
 import randomRouters from "./routes/random";
-import filter from "./routes/filterJOkes";
+import filter from "./routes/filterJokes";
 import bodyParser, { json } from "body-parser";
 
 const app = express();

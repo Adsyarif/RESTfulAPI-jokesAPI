@@ -1,8 +1,20 @@
 import { Router } from "express";
-import { getSpecificJoke } from "../controllers/jokes";
+import {
+  addNewJoke,
+  editJokes,
+  getSpecificJoke,
+  replaceJokes,
+  deleteJoke,
+  deleteAllJokes,
+} from "../controllers/jokes";
 
 const jokesRoutes = Router();
 
 jokesRoutes.get("/:id", getSpecificJoke);
+jokesRoutes.post("/", addNewJoke);
+jokesRoutes.put("/:id", replaceJokes);
+jokesRoutes.patch("/:id", editJokes);
+jokesRoutes.delete("/all", deleteAllJokes);
+jokesRoutes.delete("/:id", deleteJoke);
 
 export default jokesRoutes;
